@@ -6,9 +6,18 @@ The code starts by importing several libraries required for the application. The
 
 **Data Preparation:**
 
-A dataset of restaurants is loaded from a CSV file named "food1.csv" using pandas. Label encoding is applied to two columns, 'cuisines' and 'locality', to convert categorical data into numerical format. Min-Max scaling is applied to the 'average_cost_for_one' column to normalize its values. A k-nearest neighbors (KNN) model is trained on the dataset using the 'cuisine_encoded', 'average_cost_for_one', and 'locality_encoded' features. This model is used for recommending restaurants.
+A dataset of restaurants is loaded from a CSV file named "food1.csv" using pandas.
+
+Label encoding is applied to two columns, 'cuisines' and 'locality', to convert categorical data into numerical format.
+
+Min-Max scaling is applied to the 'average_cost_for_one' column to normalize its values. 
+
+A k-nearest neighbors (KNN) model is trained on the dataset using the 'cuisine_encoded', 'average_cost_for_one', and 'locality_encoded' features.
+
+This model is used for recommending restaurants.
 
 **Function Definitions:**
 
 fav(lko_rest1): This function takes a DataFrame as input and performs content-based filtering for restaurant recommendations based on restaurant highlights. It returns a DataFrame containing recommended restaurants.
+
 rest_rec(cost, people=2, min_cost=0, cuisine=[], Locality=[], fav_rest="", lko_rest=lko_rest): This function takes user preferences (budget, number of people, cuisine, locality, and a favorite restaurant) and filters the dataset to recommend restaurants that match these preferences. It returns a DataFrame with restaurant recommendations. 
